@@ -1,0 +1,72 @@
+{
+  "name": "Meal",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the meal"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the meal"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "snack"
+      ],
+      "description": "Meal category"
+    },
+    "calories": {
+      "type": "number",
+      "description": "Estimated calories"
+    },
+    "protein": {
+      "type": "number",
+      "description": "Protein in grams"
+    },
+    "carbs": {
+      "type": "number",
+      "description": "Carbohydrates in grams"
+    },
+    "fat": {
+      "type": "number",
+      "description": "Fat in grams"
+    },
+    "ingredients": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "List of ingredients"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Image URL for the meal"
+    },
+    "prep_time": {
+      "type": "number",
+      "description": "Preparation time in minutes"
+    },
+    "is_favorite": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this is a favorite meal"
+    }
+  },
+  "required": [
+    "name",
+    "category"
+  ]
+}
