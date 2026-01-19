@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+/* Print styles - only triggers when you print */
+@media print {
+  /* 1. Hide the Sidebar, Nav, Search, and ALL Buttons */
+  nav, 
+  aside, 
+  button, 
+  .no-print,
+  .search-container {
+    display: none !important;
+  }
+
+  /* 2. Remove backgrounds and shadows for a clean white look */
+  body {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 3. Ensure the Calendar/Recipe takes up the full width of the page */
+  .calendar-container, 
+  .recipe-card {
+    width: 100% !important;
+    max-width: none !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: none !important;
+  }
+
+  /* 4. Force colors (like meal categories) to appear */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
