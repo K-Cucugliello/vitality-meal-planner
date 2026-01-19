@@ -967,5 +967,6 @@ const convertExistingRecipesToFractions = async () => {
               )}
 
         </div>
-    );
-};
+    )
+}
+
