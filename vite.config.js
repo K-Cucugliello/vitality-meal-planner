@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './', // This ensures paths are relative and work on Vercel/GitHub
+  // Use './' to make all paths relative. 
+  // This is the most "fail-safe" way for GitHub Pages and Vercel.
+  base: './', 
 })
