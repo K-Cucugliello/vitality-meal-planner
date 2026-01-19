@@ -3,7 +3,7 @@ import { format, startOfWeek, addDays, isSameDay } from 'date-fns';
 import { Plus, X, Trash2, ChevronLeft, ChevronRight, Sparkles, Loader2, Refrigerator, Search, Printer, ListPlus } from 'lucide-react';
 import { Button } from "../components/ui/button";
 import MealForm from '../components/meal/MealForm';
-import { supabase } from '../supabaseclient';
+import { supabase } from '../supabaseClient';
 
 export default function MealPlanner() {
     const [currentDate, setCurrentDate] = useState(new Date());
